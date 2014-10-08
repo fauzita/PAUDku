@@ -1,0 +1,46 @@
+{
+  "name": "PAUDKu",
+  "main": "server.js",
+  "version": "0.0.1",
+  "keywords": [
+    "angularjs",
+    "angular",
+    "loGIN",
+    "service",
+    "PAUDKu"
+  ],
+  "dependencies": {
+    "express": "~4.1.1",
+    "mongoose": "~3.8.0",
+    "express-jwt": "~0.3.1",
+    "jsonwebtoken": "~0.4.0",
+    "json": "0.0.14",
+    "bcryptjs": "~2.0.2",
+    "body-parser": "~1.4.2",
+    "morgan": "~1.0.1",
+    "redis": "~0.10.1",
+    "pdfmake": "^0.1.8"
+  },
+  "scripts": {
+    "start": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrgamer/angular-login-example.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-concat-sourcemap": "~0.3.1",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-git-describe": "~2.3.2",
+    "grunt-html2js": "~0.1.7",
+    "grunt-node-inspector": "^0.1.5",
+    "grunt-nodemon": "^0.3.0"
+  }
+}

@@ -1,0 +1,75 @@
+<form class="form-apps" name="alamatPesertaDidikForm" role="administration" ng-submit="submit(alamatPesertaDidikForm)"  ng-controller="alamatPesertaDidikCtrl">
+	<div class="well well-sm">
+		<!-- Form Name -->
+		<legend>ID</legend>
+
+		<div class="row" >
+	    <pre>ID Peserta Didik</pre>
+	    <input type="text" ng-model="pesertaDidikObj.noInduk" placeholder="Silahkan masukkan No Induk Peserta Didik" typeahead="no_induk for no_induk in getPesertaDidik($viewValue)" typeahead-loading="loadPesertaDidik" class="form-control">
+	    <i ng-show="loadPesertaDidik" class="glyphicon glyphicon-refresh"></i>
+		</div>
+		
+		<legend>Tempat Tinggal</legend>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="txtAlamat">Alamat*</label>  
+			<div class="col-xs-6">
+			<input  name="kampung" ng-model="pesertaDidikObj.kampung" type="text" placeholder="Kp" class="form-control input-xs input-sm" required="">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="desa">Desa/ Kelurahan</label>  
+			<div class="col-xs-6">
+			<input  name="desa" ng-model="pesertaDidikObj.desa" type="text" placeholder="Desa" class="form-control input-xs input-sm" required="">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="txtKecamatan">Kecamatan</label>  
+			<div class="col-xs-5">
+			<input  name="kecamatan" ng-model="pesertaDidikObj.kecamatan" type="text" placeholder="Kecamatan" class="form-control input-xs input-sm" required="">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="kabupaten">Kabupaten</label>  
+			<div class="col-xs-5">
+			<input  name="kabupaten" ng-model="pesertaDidikObj.kabupaten" type="text" placeholder="Kabupaten" class="form-control input-xs input-sm" required="">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="kodePos">Kode Pos</label>  
+			<div class="col-xs-4">
+			<input  name="kodePos" ng-model="pesertaDidikObj.kodePos" type="text" placeholder="Kode Pos" class="form-control input-xs input-sm">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="telepon">No Telp</label>  
+			<div class="col-xs-4">
+			<input  name="telepon" ng-model="pesertaDidikObj.telepon" type="text" placeholder="Telp" class="form-control input-xs input-sm">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-xs-3 " for="button1id"></label>
+			<div class="col-xs-9">
+				<button  name="button1id" class="btn btn-success">Submit</button>
+			</div>
+		</div>
+	</div>
+</form>

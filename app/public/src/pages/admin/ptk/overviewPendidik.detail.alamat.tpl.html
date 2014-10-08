@@ -1,0 +1,77 @@
+<form class="form-apps" name="alamatPendidikForm" role="administration" ng-submit="submit(alamatPendidikForm)" ng-controller="alamatPendidikCtrl">
+	<div class="well well-sm">
+		<!-- Form Name -->
+		<legend>ID</legend>
+
+		<div class="row" >
+	    <pre>ID Pendidik</pre>
+	    <input type="text" ng-model="pendidikObj.idPeg" placeholder="Silahkan masukkan ID Pendidik" typeahead="idPeg for idPeg in getPendidik($viewValue)" typeahead-loading="loadPendidik" class="form-control">
+	    <i ng-show="loadPendidik" class="glyphicon glyphicon-refresh"></i>
+		</div>
+
+		<legend>Tempat Tinggal</legend>
+
+
+		<!-- Text input-->
+		<div class="row">
+		  <label class="col-xs-4 " for="txtAlamat">Alamat*</label>  
+		  <div class="col-xs-6">
+		  <input id="kampung" name="kp" ng-model="pendidikObj.kampung" type="text" placeholder="Kp" class="form-control input-xs input-sm" required>
+		    
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+		  <label class="col-xs-4 " for="txtDesa">Desa/ Kelurahan</label>  
+		  <div class="col-xs-6">
+		  <input id="desa" name="desa" ng-model="pendidikObj.desa" type="text" placeholder="Desa" class="form-control input-xs input-sm" required>
+		    
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+		  <label class="col-xs-4 " for="txtKecamatan">Kecamatan</label>  
+		  <div class="col-xs-5">
+		  <input id="kecamatan" name="kecamatan" ng-model="pendidikObj.kecamatan" type="text" placeholder="Kecamatan" class="form-control input-xs input-sm" required>
+		    
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+		  <label class="col-xs-4 " for="txtKabupaten">Kabupaten</label>  
+		  <div class="col-xs-5">
+		  <input id="kabupaten" name="kabupaten" ng-model="pendidikObj.kabupaten" type="text" placeholder="Kabupaten" class="form-control input-xs input-sm" required>
+		    
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+		  <label class="col-xs-4 " for="txtKodePos">Kode Pos</label>  
+		  <div class="col-xs-4">
+		  <input id="kodePos" name="kodePos" ng-model="pendidikObj.kodePos" type="text" placeholder="Kode Pos" class="form-control input-xs input-sm">
+		    
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+		  <label class="col-xs-4 " for="txtTelepon">No Telp</label>  
+		  <div class="col-xs-4">
+		  <input id="telepon" name="telepon" ng-model="pendidikObj.telepon" type="text" placeholder="Telp" class="form-control input-xs input-sm">
+		    
+		  </div>
+		</div>
+
+
+		<div class="row">
+		  <label class="col-md-3 " for="button1id"></label>
+		  <div class="col-md-8">
+		    <button  name="button1id" class="btn btn-success">Submit</button>
+		  </div>
+		</div>
+	</div> 
+</form>

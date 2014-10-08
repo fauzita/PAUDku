@@ -1,0 +1,32 @@
+<div ng-controller="ngTablePendidikController">
+    <div>
+        <table ng-table="tableParams" class="table ng-table-responsive ng-table-rowselected ">
+            <tr ng-repeat="pendidik in $data" ng-click='pendidik.$selected = !pendidik.$selected; changeSelection(pendidik)' ng-class="{'active': pendidik.$selected}">
+                <td data-title="'ID'" sortable="'idPeg'">
+                    <i class="fa fa-angle-double-down"></i> {{pendidik.idPeg}}
+                </td>
+                <td data-title="'Nama'" >
+                    <i class="fa fa-user"></i> {{pendidik.nama}}
+                </td>
+                <td data-title="'jabatan'"> {{pendidik.jabatan}}
+                </td>
+                <td data-title="'Jenis Kelamin'">
+                    <i class="fa fa-child"></i> {{pendidik.jk}}
+                </td>
+                <td data-title="'Tempat Lahir'"> {{pendidik.tmpt_lahir}}
+                </td>
+                <td data-title="'Tanggal Lahir'">
+                    <i class="fa fa-gift"></i> {{pendidik.tgl_lahir | date : dd-MM-yyyy}}
+                </td>
+                <td data-title="''">
+                    <button  class="btn" ng-click="edit()"><i class="fa fa-edit"></i></button>
+                    <button class="btn" ng-click="deleteData(pendidik)"><i class="fa fa-trash-o"></i></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div >
+        <button class="btn" ng-click="editData()"><i class="fa fa-edit"></i></button>
+        <button  class="btn" ng-click="deleteData()"><i class="fa fa-trash-o"></i></button>
+    </div>
+</div>

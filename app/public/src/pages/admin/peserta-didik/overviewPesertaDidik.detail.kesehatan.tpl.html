@@ -1,0 +1,82 @@
+<form class="form-apps" name="kesehatanPesertaDidikForm" role="administration" ng-submit="submit(kesehatanPesertaDidikForm)" ng-controller="kesehatanPesertaDidikCtrl">
+	<div class="well well-sm">
+		<!-- Form Name -->
+		<legend>ID</legend>
+
+		<div class="row" >
+	    <pre>ID Peserta Didik</pre>
+	    <input type="text" ng-model="pesertaDidikObj.noInduk" placeholder="Silahkan masukkan No Induk Peserta Didik" typeahead="no_induk for no_induk in getPesertaDidik($viewValue)" typeahead-loading="loadPesertaDidik" class="form-control">
+	    <i ng-show="loadPesertaDidik" class="glyphicon glyphicon-refresh"></i>
+		</div>
+
+		<legend>Kesehatan</legend>
+		
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="berat">Berat Badan</label>  
+			<div class="col-xs-4">
+			<input  name="berat" ng-model="pesertaDidikObj.berat" type="text" placeholder="Berat Badan" class="form-control input-xs input-sm">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tinggi">Tinggi Badan</label>  
+			<div class="col-xs-4">
+			<input  name="tinggi" ng-model="pesertaDidikObj.tinggi" type="text" placeholder="Tinggi Badan" class="form-control input-xs input-sm">
+				
+			</div>
+		</div>
+
+		<!-- Multiple Radios (inline) -->
+		<div class="row">
+			<label class="col-xs-4 " for="golonganDarah">Golongan Darah</label>
+			<div class="col-xs-4"> 
+				<label class="radio-inline" for="golonganDarah-0">
+					<input type="radio" name="golonganDarah" ng-model="pesertaDidikObj.golonganDarah" value="A" checked="checked">
+					A
+				</label> 
+				<label class="radio-inline" for="golonganDarah-1">
+					<input type="radio" name="golonganDarah" ng-model="pesertaDidikObj.golonganDarah" value="B">
+					B
+				</label> 
+				<label class="radio-inline" for="golonganDarah-2">
+					<input type="radio" name="golonganDarah" ng-model="pesertaDidikObj.golonganDarah" value="O">
+					O
+				</label> 
+				<label class="radio-inline" for="golonganDarah-3">
+					<input type="radio" name="golonganDarah" ng-model="pesertaDidikObj.golonganDarah" value="AB">
+					AB
+				</label>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="penyakit">Penyakit yang pernah diderita</label>  
+			<div class="col-xs-5">
+			<input  name="penyakit" ng-model="pesertaDidikObj.penyakit" type="text" placeholder="Riwayat Penyakit" class="form-control input-xs input-sm">
+				
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="imunisasi">Imunisasi yang pernah diterima</label>  
+			<div class="col-xs-5">
+			<input  name="imunisasi" ng-model="pesertaDidikObj.imunisasi" type="text" placeholder="Riwayat Imunisasi" class="form-control input-xs input-sm">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-md-3 " for="button1id"></label>
+			<div class="col-md-8">
+				<button name="button1id" class="btn btn-success">Submit</button>
+				<button name="button2id" class="btn btn-danger">Cancel</button>
+			</div>
+		</div>
+
+	</div>
+</form>

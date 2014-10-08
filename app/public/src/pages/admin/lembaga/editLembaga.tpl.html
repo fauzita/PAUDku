@@ -1,0 +1,80 @@
+<form name="lembagaForm"  class="form-apps" role="administration" ng-submit="submit(lembagaForm)" ng-controller="LembagaController"  novalidate>
+	<div class="well well-sm">
+		<!-- Form Name -->
+		<legend>Lembaga</legend>
+
+
+		<!-- Text input-->
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.namaLembaga.$invalid && !lembagaForm.namaLembaga.$pristine }">
+			<label class="col-xs-4">Nama Lembaga</label>  
+			<div class="col-xs-7" >
+			<input name="namaLembaga" ng-model="lembagaObj.namaLembaga" type="text" placeholder="Nama" class="form-control input-xs input-sm" required>
+					<p ng-show="lembagaForm.namaLembaga.$invalid && !lembagaForm.namaLembaga.$pristine" class="help-block">Nama Lembaga harus diisi</p>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.ijin.$invalid && !lembagaForm.ijin.$pristine }">
+			<label class="col-xs-4 ">Ijin Operasional</label>  
+			<div class="col-xs-7">
+			<input name="ijin" ng-model="lembagaObj.ijin" type="text" placeholder="No Ijin Operasional" class="form-control input-xs input-sm" required>
+						<p ng-show="lembagaForm.ijin.$invalid && !lembagaForm.ijin.$pristine" class="help-block">No Ijin Operasional harus diisi</p>
+			</div>
+		</div>
+
+
+		<!-- Text input-->
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.namaPenyelenggara.$invalid && !lembagaForm.namaPenyelenggara.$pristine }">
+			<label class="col-xs-4 ">Nama Penyelenggara</label>  
+			<div class="col-xs-7">
+			<input name="namaPenyelenggara" ng-model="lembagaObj.namaPenyelenggara" type="text" placeholder="Nama" class="form-control input-xs input-sm" required>
+						<p ng-show="lembagaForm.namaPenyelenggara.$invalid && !lembagaForm.namaPenyelenggara.$pristine" class="help-block">Nama Penyelenggara Lembaga harus diisi</p>
+			</div>
+		</div>
+
+
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.tanggalBerdiri.$invalid && !lembagaForm.tanggalBerdiri.$pristine }">
+				<label class="col-xs-4 " for="tanggalBerdiri">Tanggal Berdiri</label>  
+				<div class="col-md-6">
+						<p class="input-group">
+							<input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="lembagaObj.tanggalBerdiri" is-open="opened" min-date="minDate" max-date="'22-06-2015'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default btn-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+							</span>
+						</p>
+				</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.telepon.$invalid && !lembagaForm.telepon.$pristine }">
+			<label class="col-xs-4 ">Telepon</label>  
+			<div class="col-xs-7">
+			<input name="telepon" ng-model="lembagaObj.telepon" type="text" placeholder="No Telp" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.email.$invalid && !lembagaForm.email.$pristine }">
+			<label class="col-xs-4 " for="email">Email</label>  
+			<div class="col-xs-7">
+			<input name="email" ng-model="lembagaObj.email" ng-required="true" type="email" placeholder="Email" class="form-control input-xs input-sm">
+					<p ng-show="lembagaForm.email.$invalid && !lembagaForm.email.$pristine" class="help-block">Email tidak valid</p>
+			</div>
+		</div>
+
+		<!-- Textarea -->
+		<div class="row" ng-class="{ 'has-error' : lembagaForm.alamat.$invalid && !lembagaForm.alamat.$pristine }">
+			<label class="col-xs-4 ">alamat</label>
+			<div class="col-xs-8">                     
+				<textarea class="form-control input-xs input-sm" name="alamat" ng-model="lembagaObj.alamat"> </textarea>
+			<p ng-show="lembagaForm.alamat.$invalid && !lembagaForm.alamat.$pristine" class="help-block">Alamat harus diisi</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<button class="btn btn-lg btn-block" type="submit" 
+					ng-disabled="lembagaForm.$invalid || lembagaForm.$pristine">SUBMIT
+			</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,141 @@
+<form class="form-apps" name="pendidikanPendidikForm" role="administration" ng-submit="submit(pendidikanPendidikForm)" ng-controller="pendidikanPendidikCtrl" novalidate>
+	<div class="well well-sm">
+		<!-- Form Name -->
+		<legend>ID</legend>
+
+		<div class="row" >
+	    <pre>ID Pendidik</pre>
+	    <input type="text" ng-model="pendidikObj.idPeg" placeholder="Silahkan masukkan ID Pendidik" typeahead="idPeg for idPeg in getPendidik($viewValue)" typeahead-loading="loadPendidik" class="form-control">
+	    <i ng-show="loadPendidik" class="glyphicon glyphicon-refresh"></i>
+		</div>
+		
+		<legend>Pendidikan</legend>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="namaSD">Nama SD</label>  
+			<div class="col-xs-4">
+			<input  name="namaSD" ng-model="pendidikObj.namaSD" type="text" placeholder="Nama Sekolah" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunMasukSD">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunMasukSD" ng-model="pendidikObj.tahunMasukSD" type="number" placeholder="tahun Masuk" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunLulusSD">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunLulusSD" ng-model="pendidikObj.tahunLulusSD" type="number" placeholder="tahun Lulus" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="namaSMP">Nama SMP</label>  
+			<div class="col-xs-4">
+			<input  name="namaSMP" ng-model="pendidikObj.namaSMP" type="text" placeholder="Nama Sekolah" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunMasukSMP">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunMasukSMP" ng-model="pendidikObj.tahunMasukSMP" type="number" placeholder="tahun Masuk" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunLulusSMP">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunLulusSMP" ng-model="pendidikObj.tahunLulusSMP" type="number" placeholder="tahun Lulus" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="namaSMA">Nama SMA</label>  
+			<div class="col-xs-4">
+			<input  name="namaSMA" ng-model="pendidikObj.namaSMA" type="text" placeholder="Nama Sekolah" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="jurusanSMA">Jurusan</label>  
+			<div class="col-xs-4">
+			<input  name="jurusanSMA" ng-model="pendidikObj.jurusanSMA" type="text" placeholder="Jurusan" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunMasukSMA">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunMasukSMA" ng-model="pendidikObj.tahunMasukSMA" type="number" placeholder="tahun Masuk" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunLulusSMA">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunLulusSMA" ng-model="pendidikObj.tahunLulusSMA" type="number" placeholder="tahun Lulus" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="namaPG">Nama Perguruan Tinggi</label>  
+			<div class="col-xs-4">
+			<input  name="namaPG" ng-model="pendidikObj.namaPG" type="text" placeholder="Nama Perguruan Tinggi" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="jurusanPG">Jenjang</label>  
+			<div class="col-xs-4">
+			<input  name="jenjangPG" ng-model="pendidikObj.jenjangPG" type="text" placeholder="Jenjang" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="jurusanPG">Jurusan</label>  
+			<div class="col-xs-4">
+			<input  name="jurusanPG" ng-model="pendidikObj.jurusanPG" type="text" placeholder="Jurusan" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunMasukPG">Tahun Masuk</label>  
+			<div class="col-xs-4">
+			<input  name="tahunMasukPG" ng-model="pendidikObj.tahunMasukPG" type="number" placeholder="tahun Masuk" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<label class="col-xs-4 " for="tahunLulusPG">Tahun Lulus</label>  
+			<div class="col-xs-4">
+			<input  name="tahunLulusPG" ng-model="pendidikObj.tahunLulusPG" type="number" placeholder="tahun Lulus" class="form-control input-xs input-sm">
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-md-3 " for="button1id"></label>
+			<div class="col-md-8">
+				<button  name="button1id" class="btn btn-success">Submit</button>
+			</div>
+		</div>
+	</div>
+</form>

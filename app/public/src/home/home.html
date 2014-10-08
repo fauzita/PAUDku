@@ -1,0 +1,62 @@
+<div class="container">
+      <div class="home-heading">
+      <h1>PAUDku</h1>
+      <p>Selamat Datang di Program Aplikasi Untuk Dataku PAUD Uswatun Hasanah</p>
+    </div>
+  <div class="row">
+        <!-- Boxes de Acoes -->
+      <div class="col-xs-12 col-sm-6 col-lg-6">
+      <div class="box">             
+        <div class="icon">
+          <div class="image"><i class="fa fa-thumbs-o-up"></i></div>
+          <div class="info">
+            <h3 class="title">Made with Passion</h3>
+            <p>
+              Aplikasi ini dirancang untuk memenuhi kebutuhan internal pendataan di PAUD Uswatun Hasanah. Melalui Aplikasi ini Orangtua dan para pendidik dapat memantau perkembangan peserta didik dan data-data yang dibutuhkan untuk perkembangan peserta didik
+            </p>
+          </div>
+        </div>
+        <div class="space"></div>
+      </div> 
+    </div>
+      
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+      <div class="box">             
+        <div class="icon">
+          <div class="image"><i class="fa fa-flag"></i></div>
+          <div class="info">
+            <h3 class="title">Modern Interface</h3>
+              <p>
+              Silahkan login untuk masuk ke menu administrasi data yang dibutuhkan. Bagi Peserta didik silahkan masukkan Nama dan No Induk yang telah terdaftar dan bagi Pendidik dan Staff Administrasi gunakan username dan password yang telah diberikan oleh administrator.
+            </p>
+          </div>
+        </div>
+        <div class="space"></div>
+      </div> 
+    </div>       
+    <!-- /Boxes de Acoes -->
+  </div>
+  <div class="info">
+  <form class="form-horizontal" role="form">
+    <fieldset>
+    <div class="form-group">
+        <label for="inputUsername" class="col-md-4 control-label">Username</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="inputUsername" placeholder="Username" ng-model="user.username">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword" class="col-md-4 control-label">Password</label>
+        <div class="col-md-4">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-md-10">
+            <button type="submit" class="btn btn-default btn-lg " ng-click="signIn(user.username, user.password)">Log In</button>
+        </div>
+    </div>
+    </fieldset>
+  </form>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div ng-controller="overviewLembagaController">
+    <div>
+        <h2><i class="fa fa-briefcase"></i> DATA LEMBAGA </h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-12  col-md-8">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class=" col-md-4">
+                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class=" col-md-8">
+                        <h3><i class="glyphicon glyphicon-home"></i> {{nama_lembaga}} </h3>
+                        <p><i class="glyphicon glyphicon-list-alt"></i></span> No Ijin Operasional {{no_ijin}}</p>
+                        <p><i class="glyphicon glyphicon-calendar"></i> Berdiri {{tanggal_berdiri}}</p>
+                        <p><i class="glyphicon glyphicon-map-marker"></i> Alamat {{alamat}}</p>
+                        <p><i class="glyphicon glyphicon-earphone"></i> Telepon {{telepon}}</p>
+                        <p><i class="glyphicon glyphicon-envelope"></i> Email {{email}}</p>
+                        <!-- Split button --> 
+                    </div>
+                    <div>
+                      <a ui-sref="app.admin.editLembaga" class="btn"><i class="fa fa-edit"></i> edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

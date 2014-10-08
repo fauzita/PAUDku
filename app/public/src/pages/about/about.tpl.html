@@ -1,0 +1,67 @@
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Hubungi Kami<small> Ingin tahu lebih dekat ..</small></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form name="aboutForm" ng-submit="submit(aboutForm)" ng-controller="AboutController">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Nama</label>
+                            <input type="text" class="form-control" name="nama" ng-model="aboutObj.nama"placeholder="Masukkan Nama" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" name="email" ng-model="aboutObj.email" placeholder="Masukkan Email" required /></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Pesan</label>
+                            <textarea name="message" ng-model="aboutObj.isi" class="form-control" rows="9" cols="25" required
+                                placeholder="Isi Pesan"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right">
+                            Kirim Pesan</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Lokasi Kami</legend>
+            <address>
+                <strong>PAUD Uswatun Hasanah</strong><br>
+                Jl Raya Timur No. 540<br>
+                Ds. Margaasih Kec. Cicalengka<br>
+                Bandung - Jawa Barat 40395<br>
+                <abbr title="Phone">
+                    Telp</abbr>
+                081322164275
+            </address>
+            <address>
+                <strong>Email</strong><br>
+                <a href="mailto:#">paud_uswatun_hasanah@yahoo.com</a>
+            </address>
+            </form>
+        </div>
+    </div>
+</div>

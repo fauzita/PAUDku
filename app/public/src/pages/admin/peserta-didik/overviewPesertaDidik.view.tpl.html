@@ -1,0 +1,35 @@
+<div ng-controller="ngTablePesertaDidikController">
+    <table ng-table="tableParams" class="table ng-table-responsive ng-table-rowselected ">
+        <tr ng-repeat="pesertaDidik in $data" ng-click='pesertaDidik.$selected = !pesertaDidik.$selected; changeSelection(pesertaDidik)' ng-class="{'active': pesertaDidik.$selected}">
+            <td data-title="'No Induk'" sortable="'no_induk'">
+                {{pesertaDidik.no_induk}}
+            </td>
+            <td data-title="'Nama'">
+                {{pesertaDidik.nama_lengkap}}
+            </td>
+            <td data-title="'Jenis Kelamin'">
+                {{pesertaDidik.jk}}
+            </td>
+            <td data-title="'Tempat Lahir'">
+                {{pesertaDidik.tmpt_lahir}}
+            </td>
+            <td data-title="'Tanggal Lahir'">
+                {{pesertaDidik.tgl_lahir | date : dd-MM-yyyy}}
+            </td>
+            <td data-title="'Agama'">
+                {{pesertaDidik.agama}}
+            </td>
+            <td data-title="'Kewarganegaraan'">
+                {{pesertaDidik.kewarganegaraan}}
+            </td>
+            <td data-title="'Keterangan'">
+                {{pesertaDidik.keterangan}}
+            </td>
+            <td data-title="''">
+                <a href="#" class="btn"><i class="fa fa-edit"></i></a>
+                <a href="#" class="btn"><i class="fa fa-trash-o"></i></a>
+            </td>
+        </tr>
+    </table>
+</div>
+
